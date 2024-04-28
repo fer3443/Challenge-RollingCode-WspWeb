@@ -42,6 +42,19 @@
 .grid {
   display: grid;
 }
+.btn1 {
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--color-icons);
+  font-size: var(--fs-big);
+  width: 25px;
+  height: 25px;
+}
+.btn1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
 ul {
   list-style: none;
 }
@@ -54,12 +67,20 @@ button {
 body {
   background-color: var(--color-body);
 }
-
+main {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "section-chat-card section-chat section-chat";
+  height: 100vh;
+}
 /* Header */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: var(--color-container);
   height: 100vh;
   width: var(--header-width);
+  z-index: 1;
 }
 nav {
   width: var(--header-width);
@@ -86,7 +107,8 @@ nav {
   flex-direction: column;
   gap: 1rem;
 }
-.nav-item, li {
+.nav-item,
+li {
   position: relative;
   width: 40px;
   height: 40px;
@@ -101,7 +123,7 @@ nav {
   border-radius: 50%;
   object-fit: cover;
   height: 35px;
-  width: 35px; 
+  width: 35px;
 }
 .tooltip {
   position: absolute;
@@ -116,10 +138,74 @@ nav {
   font-size: var(--fs-smaller);
   padding: 4px 12px;
   overflow: hidden;
-  transition:  opacity .1s ease-out;
+  transition: opacity 0.1s ease-out;
 }
 li:hover .tooltip {
   width: auto;
   height: auto;
   opacity: 1;
+}
+/* section-chat-card */
+.section-chat-card {
+  grid-area: section-chat-card;
+  grid-template-columns: 1fr;
+  margin-left: var(--header-width);
+  height: 100%;
+}
+.content-title-filter {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  margin-bottom: 1rem;
+}
+.box-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.form-filter {
+  width: 100%;
+  padding-left: 1rem;
+}
+.form-filter label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-filter .lupa {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 18px;
+  object-fit: contain;
+}
+.form-filter input {
+  width: 100%;
+  background-color: var(--color-secundario-alt);
+  border-radius: 0.4rem;
+  color: var(--color-text);
+  font-size: var(--fs-normal);
+  padding: 8px;
+}
+.form-filter input[type="text"]::placeholder {
+  /* acomodar */
+  padding-left: 2rem;
+}
+.filter-btn {
+  background-color: transparent;
+  cursor: pointer;
+  margin-inline: 0.5rem;
+}
+.filter-btn img {
+  width: 30px;
+  object-fit: contain;
+}
+/* section-chat */
+.section-chat {
+  grid-area: section-chat;
+  background-color: blue;
+  height: 100%;
 }

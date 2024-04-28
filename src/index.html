@@ -26,10 +26,25 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="grid">
       <section class="section-chat-card section">
-        <div class="container-chat-card container grid">
-          <div class="content-filter"></div>
+        <div class="container-chat-card grid">
+          <div class="content-filter container">
+           <div class="content-title-filter">
+            <h2>Chats</h2>
+            <div class="box-buttons">
+              <button class="btn1"><img src="assets/newChat.png" alt="nuevo chat"></button>
+              <button class="btn1"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            </div>
+           </div>
+          </div>
+          <form class="form-filter">
+            <label for="input-chat">
+             <img class="lupa" src="assets/lupa.png" alt="busqueda de chats">
+             <input type="text" name="" id="input-chat" placeholder="Buscar">
+             <button class="filter-btn"><img src="assets/filter.png" alt=""></button>
+           </label>
+         </form>
           <div class="content-card"></div>
         </div>
       </section>
