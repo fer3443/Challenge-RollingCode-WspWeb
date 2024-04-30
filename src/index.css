@@ -10,7 +10,7 @@
   --color-body: #111b21;
   --color-container: #202c33;
   --color-primario: #25d366;
-  --color-primario-alt: #017561;
+  --color-primario-alt: #06cf9c;
   --color-secundario: #202c33;
   --color-secundario-alt: #2a3942;
   --color-tildes: #54bdeb;
@@ -178,7 +178,7 @@ li:hover .tooltip {
 .form-filter .lupa {
   position: absolute;
   top: 6px;
-  left: 6px;
+  left: 1rem;
   width: 18px;
   object-fit: contain;
 }
@@ -188,11 +188,7 @@ li:hover .tooltip {
   border-radius: 0.4rem;
   color: var(--color-text);
   font-size: var(--fs-normal);
-  padding: 8px;
-}
-.form-filter input[type="text"]::placeholder {
-  /* acomodar */
-  padding-left: 2rem;
+  padding: 8px 2.2rem; /* acomodar */
 }
 .filter-btn {
   background-color: transparent;
@@ -203,9 +199,77 @@ li:hover .tooltip {
   width: 30px;
   object-fit: contain;
 }
+/* chat-cards */
+.content-chat-card {
+  margin-top: 1rem;
+}
+.chat-card {
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  column-gap: 1rem;
+}
+.img-perfil-card {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 55px;
+  width: 55px;
+}
+.chat-body {
+  border-bottom: 1px solid var(--color-text);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-name {
+  display: flex;
+  flex-direction: column;
+  row-gap: .3rem;
+  width: 15rem;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.chat-name p {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+}
+.chat-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-wrap: nowrap;
+  row-gap: 0.3rem;
+  color: var(--color-primario-alt);
+  font-size: var(--fs-smaller);
+}
+.notification {
+  display: grid;
+  place-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-primario-alt);
+  border-radius: 50%;
+  color: #000;
+}
 /* section-chat */
 .section-chat {
   grid-area: section-chat;
-  background-color: blue;
+  background-color: var(--color-container);
   height: 100%;
+}
+.container-chat {
+  height: 100%;
+  place-content: center;
+}
+.content-chat {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+.content-chat img {
+  width: 320px;
 }

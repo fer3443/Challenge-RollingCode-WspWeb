@@ -11,17 +11,53 @@
       <nav>
         <div class="nav-menu">
           <ul class="nav-list">
-            <li class="nav-item"><i class="fa-solid fa-message"></i><span class="tooltip">Chats</span></li>
-						<li class="nav-item"><img src="assets/comunidades.png" alt="comunidades" class="img-icon"><span class="tooltip">Comunidades</span></li>
-            <li class="nav-item"><img src="assets/canales.png" alt="canales" class="img-icon"><span class="tooltip">Canales</span></li>
-            <li class="nav-item"><img src="assets/estados.png" alt="estados" class="img-icon"><span class="tooltip">Estados</span></li>
-            <hr>
-            <li class="nav-item"><i class="fa-solid fa-box-archive"></i><span class="tooltip">Archivados</span></li>
-            <li class="nav-item"><i class="fa-regular fa-star"></i><span class="tooltip">Destacados</span></li>
+            <li class="nav-item">
+              <i class="fa-solid fa-message"></i
+              ><span class="tooltip">Chats</span>
+            </li>
+            <li class="nav-item">
+              <img
+                src="assets/comunidades.png"
+                alt="comunidades"
+                class="img-icon"
+              /><span class="tooltip">Comunidades</span>
+            </li>
+            <li class="nav-item">
+              <img
+                src="assets/canales.png"
+                alt="canales"
+                class="img-icon"
+              /><span class="tooltip">Canales</span>
+            </li>
+            <li class="nav-item">
+              <img
+                src="assets/estados.png"
+                alt="estados"
+                class="img-icon"
+              /><span class="tooltip">Estados</span>
+            </li>
+            <hr />
+            <li class="nav-item">
+              <i class="fa-solid fa-box-archive"></i
+              ><span class="tooltip">Archivados</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa-regular fa-star"></i
+              ><span class="tooltip">Destacados</span>
+            </li>
           </ul>
           <ul class="nav-list">
-            <li class="nav-item"><i class="fa-solid fa-gear"></i><span class="tooltip">Configuración</span></li>
-            <li><img src="assets/imgperfil.jpeg" class="perfil-img" alt="Imagen de perfil"><span class="tooltip">Perfil</span></li>
+            <li class="nav-item">
+              <i class="fa-solid fa-gear"></i
+              ><span class="tooltip">Configuración</span>
+            </li>
+            <li>
+              <img
+                src="assets/imgperfil.jpeg"
+                class="perfil-img"
+                alt="Imagen de perfil"
+              /><span class="tooltip">Perfil</span>
+            </li>
           </ul>
         </div>
       </nav>
@@ -30,26 +66,69 @@
       <section class="section-chat-card section">
         <div class="container-chat-card grid">
           <div class="content-filter container">
-           <div class="content-title-filter">
-            <h2>Chats</h2>
-            <div class="box-buttons">
-              <button class="btn1"><img src="assets/newChat.png" alt="nuevo chat"></button>
-              <button class="btn1"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            <div class="content-title-filter">
+              <h2>Chats</h2>
+              <div class="box-buttons">
+                <button class="btn1">
+                  <img
+                    src="assets/newChat.png"
+                    alt="nuevo chat"
+                    title="Nuevo chat"
+                  />
+                </button>
+                <button class="btn1" title="Menú">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+              </div>
             </div>
-           </div>
           </div>
           <form class="form-filter">
             <label for="input-chat">
-             <img class="lupa" src="assets/lupa.png" alt="busqueda de chats">
-             <input type="text" name="" id="input-chat" placeholder="Buscar">
-             <button class="filter-btn"><img src="assets/filter.png" alt=""></button>
-           </label>
-         </form>
-          <div class="content-card"></div>
+              <img class="lupa" src="assets/lupa.png" alt="busqueda de chats" />
+              <input type="text" name="" id="input-chat" placeholder="Buscar" />
+              <button class="filter-btn">
+                <img
+                  src="assets/filter.png"
+                  alt="filtro de chat"
+                  title="Filtro de chats no leídos"
+                />
+              </button>
+            </label>
+          </form>
+          <div class="content-chat-card container">
+            <div class="chat-card">
+              <div class="chat-img-perfil">
+                <img
+                  src="assets/imgperfil.jpeg"
+                  alt="imagen perfil"
+                  class="img-perfil-card"
+                />
+              </div>
+              <div class="chat-body">
+                <div class="chat-name">
+                  <h3>Nombre de contacto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="chat-date">
+                  <p>12:00 p.m.</p>
+                  <span class="notification">2</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section-chat section">
-        <div class="container-chat container grid"></div>
+        <div class="container-chat container grid">
+          <div class="content-chat">
+            <img src="assets/whatsapp-pc-img.png" alt="" />
+            <h2>Descargar Whatsapp para Windows</h2>
+            <p>
+              Descarga la aplicación para Windows y haz llamadas, comparte
+              pantalla y disfruta de una experiencia más rapida
+            </p>
+          </div>
+        </div>
       </section>
     </main>
     <!--Script FA Icons-->
