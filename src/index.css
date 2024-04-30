@@ -10,7 +10,7 @@
   --color-body: #111b21;
   --color-container: #202c33;
   --color-primario: #25d366;
-  --color-primario-alt: #06cf9c;
+  --color-primario-alt: #05b186;
   --color-secundario: #202c33;
   --color-secundario-alt: #2a3942;
   --color-tildes: #54bdeb;
@@ -26,7 +26,8 @@
   --fs-big: 1.2rem;
   --fs-bigger: 1.35rem;
 
-  --fw-light: 300;
+  --fw-lighter: 300;
+  --fw-light: 400;
   --fw-regular: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
@@ -40,7 +41,7 @@
 .section-title {
   color: #d1d1d1;
   font-size: 1.9rem;
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-lighter);
 }
 .section-subtitle {
   text-align: center;
@@ -55,17 +56,29 @@
   display: grid;
 }
 .btn1 {
+  display: grid;
+  place-content: center;
   background-color: transparent;
   cursor: pointer;
   color: var(--color-icons);
   font-size: var(--fs-big);
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
 }
 .btn1 img {
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+.btn-clicked {
+  background-color: #202C33;
+  border-radius: 50%;
+}
+.read-color {
+  color: var(--color-text);
+}
+.unread-color {
+  color: #fff;
 }
 ul {
   list-style: none;
@@ -119,8 +132,7 @@ nav {
   flex-direction: column;
   gap: 1rem;
 }
-.nav-item,
-li {
+.nav-item, .nav-item li {
   position: relative;
   width: 40px;
   height: 40px;
@@ -165,12 +177,56 @@ li:hover .tooltip {
   height: 100%;
 }
 .content-title-filter {
+  position: relative;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 1rem;
   margin-bottom: 1rem;
+}
+.menu-options {
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+  background-color: var(--color-container);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 1;
+  transition: all .2s;
+}
+.menu-show {
+  opacity: 1;
+  height: 12rem;
+  width: 17rem;
+  transition: all .2s;
+}
+.menu-options ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-block: .5rem;
+}
+.menu-options li {
+  color: var(--color-icons);
+  cursor: pointer;
+  padding: .5rem 1rem;
+  font-size: var(--fs-normal);
+}
+.menu-options hr {
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-subtitle);
+}
+
+.menu-options li:hover {
+  background-color: var(--color-body);
 }
 .box-buttons {
   display: flex;
@@ -200,7 +256,7 @@ li:hover .tooltip {
   border-radius: 0.4rem;
   color: var(--color-text);
   font-size: var(--fs-normal);
-  padding: 8px 2.2rem; /* acomodar */
+  padding: 8px 1rem 8px 4.5rem; /* acomodar */
 }
 .filter-btn {
   background-color: transparent;
@@ -216,6 +272,7 @@ li:hover .tooltip {
   margin-top: 1rem;
 }
 .chat-card {
+  position: relative;
   height: 4.5rem;
   display: flex;
   align-items: center;
@@ -226,6 +283,35 @@ li:hover .tooltip {
 .chat-card:hover {
   background-color: #202C33;
 }
+.menu-options2 {
+  background-color: var(--color-container);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height:0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.menu-options2 ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-block: 1rem;
+}
+.menu-options2 li {
+  width: 100%;
+  color: var(--color-icons);
+  padding: .5rem 1rem;
+}
+.menu-options2 li:hover {
+  background-color: var(--color-body);
+}
+.menu-show2 {
+  width: 14rem;
+  height: 16rem;
+}
 .img-perfil-card {
   border-radius: 50%;
   object-fit: cover;
@@ -233,6 +319,7 @@ li:hover .tooltip {
   width: 55px;
 }
 .chat-body {
+  position: relative;
   border-bottom: 1px solid var(--color-subtitle);
   height: 100%;
   width: 100%;
@@ -249,9 +336,16 @@ li:hover .tooltip {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.chat-name h3 {
+  font-weight: var(--fw-regular);
+}
 .chat-name p {
-  font-size: var(--fs-small);
-  font-weight: var(--fw-semibold);
+  font-size: var(--fs-smaller);
+  font-weight: var(--fw-regular);
+}
+.chat-name p i {
+  color: var(--color-tildes);
+  margin-right: .2rem;
 }
 .chat-date {
   display: flex;
@@ -263,6 +357,7 @@ li:hover .tooltip {
   font-size: var(--fs-smaller);
 }
 .box-notification {
+  height: 24px;
   position: relative;
   display: flex;
   align-items: center;
@@ -272,8 +367,8 @@ li:hover .tooltip {
 .notification {
   display: grid;
   place-content: center;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   background-color: var(--color-primario-alt);
   border-radius: 50%;
   color: #000;
@@ -327,7 +422,14 @@ li:hover .tooltip {
 .btn-download-store {
   background-color: #05b186;
   border-radius: 1.2rem;
-  font-weight: var(--fw-regular);
-  padding: 10px 20px;
+  cursor: pointer;
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-light);
+  padding: 10px 22px;
   margin: 1rem 0;
+  transition: background-color .2s;
+}
+.btn-download-store:hover {
+  background-color: hsl(165, 95%, 40%);
+  transition: all .2s;
 }

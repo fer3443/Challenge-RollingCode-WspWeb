@@ -65,8 +65,8 @@
     <main class="grid">
       <section class="section-chat-card section">
         <div class="container-chat-card grid">
-          <div class="content-filter container">
-            <div class="content-title-filter">
+          <div class="content-filter">
+            <div class="content-title-filter container">
               <h2>Chats</h2>
               <div class="box-buttons">
                 <button class="btn1">
@@ -76,9 +76,17 @@
                     title="Nuevo chat"
                   />
                 </button>
-                <button class="btn1" title="Menú">
+                <button class="btn1" title="Menú" id="buton-menu">
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
+                <div class="menu-options" id="menu-options">
+                  <ul>
+                    <li>Nuevo grupo</li>
+                    <li>Seleccionar chats</li>
+                    <li>Cerrar sesión</li>
+                    <hr>
+                    <li>Obtener WhatsApp para Windows</li>
+                  </ul>
               </div>
             </div>
           </div>
@@ -105,7 +113,7 @@
                 />
               </div>
               <div class="chat-body">
-                <div class="chat-name">
+                <div class="chat-name unread-color">
                   <h3>Nombre de contacto</h3>
                   <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
@@ -118,10 +126,53 @@
                 </div>
               </div>
             </div>
+            <div class="chat-card container">
+              <div class="chat-img-perfil">
+                <img
+                  src="assets/imgperfil.jpeg"
+                  alt="imagen perfil"
+                  class="img-perfil-card"
+                />
+              </div>
+              <div class="chat-body">
+                <div class="chat-name">
+                  <h3>Fernando</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="chat-date">
+                  <p>11:11 p.m.</p>
+                  <div class="box-notification">
+                    <span class="notification">2</span>
+                    <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-card container">
+              <div class="chat-img-perfil">
+                <img
+                  src="assets/imgperfil.jpeg"
+                  alt="imagen perfil"
+                  class="img-perfil-card"
+                />
+              </div>
+              <div class="chat-body">
+                <div class="chat-name">
+                  <h3>Fernando</h3>
+                  <p><i class="fa-solid fa-check-double"></i>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="chat-date">
+                  <p class="read-color">9:30 a.m.</p>
+                  <div class="box-notification">
+                    <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="section-chat section">
+      <section class="section-chat section"  id="section-chat">
         <div class="container-chat container grid">
           <div class="content-chat">
             <img src="assets/whatsapp-pc-img.png" alt="imagen pc WhatsApp" />
@@ -136,6 +187,7 @@
         </div>
       </section>
     </main>
+    <script src="/src/index.js"></script>
     <!--Script FA Icons-->
     <script
       src="https://kit.fontawesome.com/f49e206200.js"
