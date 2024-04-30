@@ -8,31 +8,23 @@
       btnMenu.classList.toggle("btn-clicked");
     };
     btnMenu.addEventListener("click",() => handleButtonMenu());
-
-    //manejo del boton opciones chat
-    const btnChevron = document.querySelectorAll(".chevron");
-    const chatCard = document.querySelectorAll(".chat-card");
-
-    const createMenu = () => {
-        const menuOptions2 = document.createElement("div");
-        menuOptions2.className = "menu-options2";
-        menuOptions2.innerHTML=`
-        <ul>
-        <li>Archivar chat</li>
-        <li>Silenciar notificaciones</li>
-        <li>Eliminar chat</li>
-        <li>Fijar chat</li>
-        <li>Marcar como leído</li>
-        <li>Bloquear</li>
-      </ul>
-        `
-        chatCard.map(card => {//corregir esta parte
-           card.appendChild(menuOptions2)
-           return card
-        })
-    }
+    
+    //manejo de evento clic para ocultar el menu de opciones de la card
+    document.addEventListener("click", (event) => {
+      if(!menuOptions2.contains(event.target) && !btnChevron.contains(event.target)){
+        if(menuOptions2.classList.contains("show-menu2")){
+          menuOptions2.classList.remove("show-menu2")
+        }else{
+          return true
+        }
+      }
+    })
+    const btnChevron = document.querySelector(".chevron");
+    const menuOptions2 =  document.querySelector(".menu-options2");
+    //manejo del boton menu de opciones de la card
     const handleButtonChevron = () => {
-      createMenu()
+      menuOptions2.classList.toggle("show-menu2")
     }
-    btnChevron.forEach(b => b.addEventListener("click", () => handleButtonChevron()))
+
+    btnChevron.addEventListener("click", () => handleButtonChevron())
 })()

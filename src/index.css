@@ -286,10 +286,11 @@ li:hover .tooltip {
 .menu-options2 {
   background-color: var(--color-container);
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 4rem;
+  left: 23rem;
   width: 0;
   height:0;
+  overflow: hidden;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
@@ -308,9 +309,10 @@ li:hover .tooltip {
 .menu-options2 li:hover {
   background-color: var(--color-body);
 }
-.menu-show2 {
+.show-menu2 {
   width: 14rem;
   height: 16rem;
+  transition: all .2s;
 }
 .img-perfil-card {
   border-radius: 50%;
