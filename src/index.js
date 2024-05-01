@@ -1,30 +1,43 @@
+import users from "./user.js";
+import {renderChat, handleButtonMenu2} from "../src/scripts/funciones.js";
 (() => {
-    const btnMenu =  document.querySelector("#buton-menu");
-    const menuOptions = document.querySelector("#menu-options");
+  const cardContainer = document.querySelector("#content-chat-card");
+  const btnMenu = document.querySelector("#buton-menu");
+  const menuOptions = document.querySelector("#menu-options");
+  renderChat(users,cardContainer);
 
-    //manejo del boton menu
-    const handleButtonMenu = () => {
-      menuOptions.classList.toggle("menu-show");
-      btnMenu.classList.toggle("btn-clicked");
-    };
-    btnMenu.addEventListener("click",() => handleButtonMenu());
-    
-    //manejo de evento clic para ocultar el menu de opciones de la card
-    document.addEventListener("click", (event) => {
-      if(!menuOptions2.contains(event.target) && !btnChevron.contains(event.target)){
-        if(menuOptions2.classList.contains("show-menu2")){
-          menuOptions2.classList.remove("show-menu2")
-        }else{
-          return true
+  //manejo del boton menu
+  const handleButtonMenu = () => {
+    menuOptions.classList.toggle("menu-show");
+    btnMenu.classList.toggle("btn-clicked");
+  };
+  btnMenu.addEventListener("click", () => handleButtonMenu());
+
+  //manejo de menus-options2 
+  const allBtnChev = document.querySelectorAll(".chevron");
+  handleButtonMenu2(allBtnChev);
+
+ //manejo de menus-options para cerrado automatico
+ const menuOptions2 = document.querySelectorAll(".menu-options2")
+  document.addEventListener("click", (event) => {
+    let clicFueraMenu = true;
+    menuOptions2.forEach(menu => {
+        if (menu.contains(event.target)) {
+            clicFueraMenu = false;
         }
-      }
-    })
-    const btnChevron = document.querySelector(".chevron");
-    const menuOptions2 =  document.querySelector(".menu-options2");
-    //manejo del boton menu de opciones de la card
-    const handleButtonChevron = () => {
-      menuOptions2.classList.toggle("show-menu2")
+    });
+    allBtnChev.forEach(btn => {
+        if (btn.contains(event.target)) {
+            clicFueraMenu = false;
+        }
+    });
+    // Si se hizo clic fuera de todos los menús y botones de chev, oculta los menús que están visibles
+    if (clicFueraMenu) {
+        menuOptions2.forEach(menu => {
+            if (menu.classList.contains("show-menu2")) {
+                menu.classList.remove("show-menu2");
+            }
+        });
     }
-
-    btnChevron.addEventListener("click", () => handleButtonChevron())
-})()
+  });
+})();

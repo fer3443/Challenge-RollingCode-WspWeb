@@ -132,7 +132,7 @@ nav {
   flex-direction: column;
   gap: 1rem;
 }
-.nav-item, .nav-item li {
+.nav-item, .nav-list li {
   position: relative;
   width: 40px;
   height: 40px;
@@ -435,3 +435,4 @@ li:hover .tooltip {
   background-color: hsl(165, 95%, 40%);
   transition: all .2s;
 }
+/* Section chat open */
