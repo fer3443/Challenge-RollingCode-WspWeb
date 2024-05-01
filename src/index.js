@@ -31,7 +31,6 @@ import {renderChat, handleButtonMenu2} from "../src/scripts/funciones.js";
             clicFueraMenu = false;
         }
     });
-    // Si se hizo clic fuera de todos los menús y botones de chev, oculta los menús que están visibles
     if (clicFueraMenu) {
         menuOptions2.forEach(menu => {
             if (menu.classList.contains("show-menu2")) {

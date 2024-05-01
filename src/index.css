@@ -169,6 +169,48 @@ li:hover .tooltip {
   height: auto;
   opacity: 1;
 }
+/* MENU CONFIG */
+.config-container {
+  height: 100%;
+  color: var(--color-title);
+}
+.box-title-search {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.content-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: red;
+}
+.box-imagen-de-perfil {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.box-imagen-de-perfil img {
+  width: 5.5rem;
+  height: 5.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.box-imagen-de-perfil h4 {
+  font-weight: var(--fw-light);
+}
+.content-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.content-info ul li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-text);
+  gap: 1rem;
+  padding: .5rem 0;
+}
 /* section-chat-card */
 .section-chat-card {
   grid-area: section-chat-card;
@@ -268,6 +310,9 @@ li:hover .tooltip {
   object-fit: contain;
 }
 /* chat-cards */
+.section-chat-card {
+  height: 100vh;
+}
 .content-chat-card {
   margin-top: 1rem;
 }
