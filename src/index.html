@@ -11,7 +11,7 @@
       <nav>
         <div class="nav-menu">
           <ul class="nav-list">
-            <li class="nav-item">
+            <li class="nav-item" id="btn-chats">
               <i class="fa-solid fa-message"></i
               ><span class="tooltip">Chats</span>
             </li>
@@ -47,7 +47,7 @@
             </li>
           </ul>
           <ul class="nav-list">
-            <li class="nav-item">
+            <li class="nav-item" id="btn-config">
               <i class="fa-solid fa-gear"></i
               ><span class="tooltip">Configuración</span>
             </li>
@@ -56,42 +56,60 @@
                 src="assets/imgperfil.jpeg"
                 class="perfil-img"
                 alt="Imagen de perfil"
-                />
-                <span class="tooltip">Perfil</span>
-              </li>
+              />
+              <span class="tooltip">Perfil</span>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="grid">
       <section class="section-chat-card section">
-        <div class="config-container container grid">
-          <div class="box-title-search">
+        <div class="config-container grid" id="config-container">
+          <div class="box-title-search container">
             <h2>Configuracion</h2>
             <form class="form-filter">
               <label for="">
-                <img class="lupa" src="assets/lupa.png" alt="busqueda de chats" />
-                <input type="text" placeholder="Buscar en configuración">
+                <img
+                  class="lupa"
+                  src="assets/lupa.png"
+                  alt="busqueda de chats"
+                />
+                <input type="text" placeholder="Buscar en configuración" />
               </label>
             </form>
           </div>
           <div class="content-info">
-            <div class="box-imagen-de-perfil">
-              <img src="/src/assets/imgperfil.jpeg" alt="">
-              <h4>Fer Arroyo</h4>
+            <div class="box-imagen-de-perfil container">
+              <img src="/src/assets/imgperfil.jpeg" alt="" />
+              <div>
+                <h4>Fer Arroyo</h4>
+                <h5>RollingCode🚀</h5>
+              </div>
             </div>
             <ul>
-              <li><i class="fa-solid fa-circle-user"></i><span>Cuenta</span></li>
+              <li>
+                <i class="fa-solid fa-circle-user"></i><span>Cuenta</span>
+              </li>
               <li><i class="fa-solid fa-lock"></i><span>Privacidad</span></li>
               <li><i class="fa-solid fa-message"></i><span>Chats</span></li>
-              <li><i class="fa-solid fa-bell"></i><span>Notificaciones</span></li>
-              <li><i class="fa-solid fa-a"></i><span>Atajos del teclado</span></li>
-              <li><i class="fa-solid fa-circle-question"></i><span>Ayuda</span></li>
-              <li><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Cerrar sesión</span></li>
+              <li>
+                <i class="fa-solid fa-bell"></i><span>Notificaciones</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-a"></i><span>Atajos del teclado</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-question"></i><span>Ayuda</span>
+              </li>
+              <li class="red-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket red-icon"></i
+                ><span>Cerrar sesión</span>
+              </li>
             </ul>
           </div>
         </div>
-        <!-- <div class="container-chat-card grid">
+        <div class="container-chat-card grid">
           <div class="content-filter">
             <div class="content-title-filter container">
               <h2>Chats</h2>
@@ -132,9 +150,9 @@
           </form>
           <div class="content-chat-card" id="content-chat-card">
           </div>
-        </div> -->
+        </div>
       </section>
-      <section class="section-chat section"  id="section-chat">
+      <section class="section-chat section" id="section-chat">
         <div class="container-chat container grid">
           <div class="content-chat">
             <img src="assets/whatsapp-pc-img.png" alt="imagen pc WhatsApp" />
@@ -143,8 +161,13 @@
               Descarga la aplicación para Windows y haz llamadas, comparte
               pantalla y disfruta de una experiencia más rapida.
             </p>
-            <button class="btn-download-store">Descargar de Microsoft Store</button>
-            <span class="lock-span"><i class="fa-solid fa-lock"></i> Tus mensajes personales están cifrados de extremo a extremo.</span>
+            <button class="btn-download-store">
+              Descargar de Microsoft Store
+            </button>
+            <span class="lock-span"
+              ><i class="fa-solid fa-lock"></i> Tus mensajes personales están
+              cifrados de extremo a extremo.</span
+            >
           </div>
         </div>
       </section>
