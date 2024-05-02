@@ -6,7 +6,7 @@ const renderChat = (users, cardContainer) => {
     card.innerHTML = `
         <div class="chat-img-perfil">
 					<img
-						src="assets/imgperfil.jpeg"
+						src="${user.foto}"
 						alt="imagen perfil"
 						class="img-perfil-card"
 					/>
@@ -17,9 +17,9 @@ const renderChat = (users, cardContainer) => {
           <p>${user.mensajes}</p>
         </div>
         <div class="chat-date">
-          <p>12:00 p.m.</p>
+          <p>${user.time}</p>
           <div class="box-notification">
-            <span class="notification">2</span>
+            <span class="notification">${user.countMsg}</span>
             <span class="chevron" id=${user.userId}><i class="fa-solid fa-chevron-down"></i></span>
           </div>
         </div>

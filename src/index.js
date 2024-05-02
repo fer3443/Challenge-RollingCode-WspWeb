@@ -1,4 +1,4 @@
-import users from "./user.js";
+import users from "./scripts/user.js";
 import { renderChat, handleButtonMenu2 } from "../src/scripts/funciones.js";
 (() => {
   const cardContainer = document.querySelector("#content-chat-card");
@@ -52,4 +52,15 @@ import { renderChat, handleButtonMenu2 } from "../src/scripts/funciones.js";
       menuConfig.classList.remove("show-config");
     }
   });
+
+  //Funcion para mostrar ventana del chat
+  const sectionChatOpen = document.querySelector("#section-chat-open");
+  const sectionChats = document.querySelector("#section-chat");
+  const chatCard = document.querySelector('.chat-card');
+  const showChat = () => {
+    sectionChats.classList.toggle('hidden');
+    sectionChatOpen.classList.toggle('show');
+  };
+
+  chatCard.addEventListener("click", () => showChat())
 })();
