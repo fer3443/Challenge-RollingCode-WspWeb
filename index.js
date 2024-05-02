@@ -21,6 +21,7 @@ import { renderChat, handleButtonMenu2 } from "./funciones.js";
   const menuOptions2 = document.querySelectorAll(".menu-options2");
   document.addEventListener("click", (event) => {
     let clicFueraMenu = true;
+
     menuOptions2.forEach((menu) => {
       if (menu.contains(event.target)) {
         clicFueraMenu = false;
@@ -66,5 +67,12 @@ import { renderChat, handleButtonMenu2 } from "./funciones.js";
     sectionChatOpen.classList.toggle('show');
   };
 
-  chatName.addEventListener("click", () => showChat())
+  chatName.addEventListener("click", () => showChat());
+  const chatOptions = document.querySelector('#menu-chat-options');
+  const btnChatOptions = document.querySelector('#btn-chat-options');
+  const handleBtnChatOptions = () => {
+    chatOptions.classList.toggle('menu-show2');
+    btnChatOptions.classList.toggle('btn-clicked2')
+  }
+  btnChatOptions.addEventListener('click', () => handleBtnChatOptions())
 })();
