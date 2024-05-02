@@ -44,9 +44,9 @@ import { renderChat, handleButtonMenu2 } from "./funciones.js";
   const menuConfig = document.querySelector("#config-container");
 
   const handleButtonConfig = () => {
-    menuConfig.classList.toggle("show-config");
-    btnConfig.classList.toggle('btn-clicked2');
-    btnChats.classList.remove('btn-clicked2')
+    menuConfig.classList.add("show-config");
+    btnConfig.classList.add('btn-clicked2');
+    btnChats.classList.remove('btn-clicked2');
   };
   btnConfig.addEventListener("click", () => handleButtonConfig());
   btnChats.addEventListener("click", () => {

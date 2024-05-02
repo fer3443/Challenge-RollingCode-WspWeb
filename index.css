@@ -219,6 +219,9 @@ li:hover .tooltip {
   display: grid;
   grid-template-columns: 1fr;
 }
+.box-title-search h2 {
+  margin-top: .5rem;
+}
 .content-info {
   height: 100%;
   display: flex;
