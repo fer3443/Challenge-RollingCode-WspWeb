@@ -1,5 +1,5 @@
-import users from "./scripts/user.js";
-import { renderChat, handleButtonMenu2 } from "../src/scripts/funciones.js";
+import users from "./user.js";
+import { renderChat, handleButtonMenu2 } from "./funciones.js";
 (() => {
   const cardContainer = document.querySelector("#content-chat-card");
   const btnMenu = document.querySelector("#buton-menu");
