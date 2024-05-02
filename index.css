@@ -74,6 +74,10 @@
   background-color: #202c33;
   border-radius: 50%;
 }
+.btn-clicked2 {
+  background-color: #374248;
+  border-radius: 50%;
+}
 .read-color {
   color: var(--color-text);
 }
@@ -99,6 +103,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "section-chat-card section-chat section-chat";
   height: 100vh;
+  overflow: hidden;
 }
 /* Header */
 header {
@@ -152,6 +157,19 @@ nav {
   object-fit: cover;
   height: 35px;
   width: 35px;
+}
+.notification-chats {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--color-primario-alt);
+  border-radius: 50%;
+  color: var(--color-secundario);
+  font-size: var(--fs-smaller);
+  font-weight: var(--fw-semibold);
+  text-align: center;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 .tooltip {
   position: absolute;

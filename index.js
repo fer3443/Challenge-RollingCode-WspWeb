@@ -45,22 +45,26 @@ import { renderChat, handleButtonMenu2 } from "./funciones.js";
 
   const handleButtonConfig = () => {
     menuConfig.classList.toggle("show-config");
+    btnConfig.classList.toggle('btn-clicked2');
+    btnChats.classList.remove('btn-clicked2')
   };
   btnConfig.addEventListener("click", () => handleButtonConfig());
   btnChats.addEventListener("click", () => {
     if (menuConfig.classList.contains("show-config")) {
+      btnChats.classList.add('btn-clicked2')
       menuConfig.classList.remove("show-config");
+      btnConfig.classList.remove('btn-clicked2')
     }
   });
 
   //Funcion para mostrar ventana del chat
   const sectionChatOpen = document.querySelector("#section-chat-open");
   const sectionChats = document.querySelector("#section-chat");
-  const chatCard = document.querySelector('.chat-card');
+  const chatName = document.querySelector('.chat-name');
   const showChat = () => {
     sectionChats.classList.toggle('hidden');
     sectionChatOpen.classList.toggle('show');
   };
 
-  chatCard.addEventListener("click", () => showChat())
+  chatName.addEventListener("click", () => showChat())
 })();
